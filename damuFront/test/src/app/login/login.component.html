@@ -1,0 +1,31 @@
+<form class="formoch" *ngIf="!isRegistering">
+  <div>
+    <input type="text" [(ngModel)]="email" name="login" class="input email" placeholder="Email" autofocus="1">
+  </div>
+  <div>
+    <input type="password" [(ngModel)]="password" name="pass" class="input pass" placeholder="Password" >
+  </div>
+  <button (click)="goBack()" class="back back3">Back</button>
+  <div class="live"></div>
+  <button type="button" (click)="register()" class="login login2">Register</button>
+  <div class="live"></div>
+  <button (click)="loginFunc()" class="login">Login</button>
+</form>
+<form class="formoch" *ngIf="isRegistering">
+  <div>
+    <input type="text" [(ngModel)]="username" name="login" class="input email" placeholder="Enter your username" autofocus="1">
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="email" name="login" class="input email" placeholder="Enter your email">
+  </div>
+  <div>
+    <input type="password" [(ngModel)]="password" name="pass" class="input pass" placeholder="Enter your password">
+  </div>
+  <div>
+    <input type="password" [(ngModel)]="recoveryPassword" name="pass" class="input pass" placeholder="Enter your recovery password">
+  </div>
+  <button  (click)="register()" class="back back3 back4">Back</button>
+  <div class="live"></div>
+  <button type="button" (click)="registerClicked()" class="login login2">Register</button>
+</form>
+
